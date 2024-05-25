@@ -1,7 +1,19 @@
 {
-    "home": "Home",
+    "my-products": "My Products",
+    "welcome": "Welcome,",
     "login": "Login",
+    "logout": "Logout",
+    "dark-mode": "Dark mode",
+    "language-mode": "Language mode",
+    "loading": "Loading...",
     "register": "Register",
-    "profile": "Profile"
+    "profile": "Profile",
+    "polish": "Polish",
+    "english": "English",
+    "scan-qr": "Scan QR",
+    "welcome-HomyApp": "Welcome to the HomyApp!",
+    "scan-to-add": "Scan barcode to add new product",
+    "go-to-register": "Go to Register"
+
   }
   

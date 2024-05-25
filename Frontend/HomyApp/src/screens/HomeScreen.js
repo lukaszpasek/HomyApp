@@ -4,14 +4,14 @@ import {
   Text,
   View,
   Alert,
-  TouchableOpacity,
   ImageBackground,
   useWindowDimensions,
 } from "react-native";
 import wallpaper from "../../assets/images/wallpaper.webp";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
-import dayjs from "dayjs";
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { AppContext } from '../context/AppContext';
+import { useTheme } from 'react-native-paper';
 import { BlurView } from "expo-blur";
 import Animated, {
   SlideInDown,
@@ -31,10 +31,10 @@ import ProductsList from "../components/ProductsList";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function App({ navigation }) {
-  const [date, setDate] = useState(dayjs());
   const [showScanner, setShowScanner] = useState(true);
   const { height } = useWindowDimensions();
-  const [loggedIn, setLoggedIn] = useState(false);
+  const { colors } = useTheme();
+  const { t } = React.useContext(AppContext)
   const y = useSharedValue(height);
 
   const footerVisibility = useSharedValue(1);
@@ -56,13 +56,6 @@ export default function App({ navigation }) {
     );
     }
   };
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDate(dayjs());
-    }, 1000 * 60);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const animatedFooterStyle = useAnimatedStyle(() => ({
     marginTop: interpolate(footerVisibility.value, [0, 1], [-85, 0]),
@@ -73,7 +66,7 @@ export default function App({ navigation }) {
     transform: [
       {
         translateY: withTiming(y.value - height, {
-          duration: 100,
+          duration: 5,
           easing: Easing.linear,
         }),
       },
@@ -92,10 +85,9 @@ export default function App({ navigation }) {
     () => (
       <Animated.View entering={SlideInUp} style={styles.header}>
         <Ionicons size={20} color="white" />
-        <Text style={styles.ListHeader}>My products</Text>
+        <Text style={colors.title}>{t('my-products')}</Text>
       </Animated.View>
     ),
-    [date]
   );
 
   return (
@@ -164,11 +156,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     height: 250,
-  },
-  ListHeader: {
-    color: "#6200ea",
-    fontSize: 32,
-    fontWeight: "bold",
   },
   footer: {
     flexDirection: "row",

@@ -3,21 +3,37 @@
   "WorkspaceRootPath": "C:\\Studia\\AM\\HomyApp\\WebAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|c:\\studia\\am\\homyapp\\webapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|solutionrelative:controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|c:\\studia\\am\\homyapp\\webapi\\json.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|solutionrelative:json.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|c:\\studia\\am\\homyapp\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost/HomyApp/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B4694-292D-4638-99E5-A53A4CAF63E0}|..\\WebAPI.Domain\\WebAPI.Domain.csproj|c:\\studia\\am\\homyapp\\webapi.domain\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|c:\\studia\\am\\homyapp\\webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost/HomyApp/True/SqlTable/dbo.Products.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost/HomyApp/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|c:\\studia\\am\\homyapp\\webapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|c:\\studia\\am\\homyapp\\webapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|solutionrelative:controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{278B4694-292D-4638-99E5-A53A4CAF63E0}|..\\WebAPI.Domain\\WebAPI.Domain.csproj|c:\\studia\\am\\homyapp\\webapi.domain\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1B39E2F0-293D-4C31-A61B-F2D5033C1337}|..\\WebAPI.Contracts\\WebAPI.Contracts.csproj|c:\\studia\\am\\homyapp\\webapi.contracts\\login\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|c:\\studia\\am\\homyapp\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,14 +47,7 @@
       "AbsoluteMoniker": "D:0:0:{278B4694-292D-4638-99E5-A53A4CAF63E0}|..\\WebAPI.Domain\\WebAPI.Domain.csproj|c:\\studia\\am\\homyapp\\webapi.domain\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|c:\\studia\\am\\homyapp\\webapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1854BA94-5DCA-44EA-9149-E976AAD63828}|WebAPI.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{278B4694-292D-4638-99E5-A53A4CAF63E0}|..\\WebAPI.Domain\\WebAPI.Domain.csproj|c:\\studia\\am\\homyapp\\webapi.domain\\webapi.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B39E2F0-293D-4C31-A61B-F2D5033C1337}|..\\WebAPI.Contracts\\WebAPI.Contracts.csproj|c:\\studia\\am\\homyapp\\webapi.contracts\\login\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B39E2F0-293D-4C31-A61B-F2D5033C1337}|..\\WebAPI.Contracts\\WebAPI.Contracts.csproj|c:\\studia\\am\\homyapp\\webapi.contracts\\accounts\\registerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -74,30 +83,46 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.AspNetUsers [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost/HomyApp/True/SqlTable/dbo.AspNetUsers.sql",
-              "ToolTip": "dbo.AspNetUsers [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-24T21:00:29.543Z",
+              "DocumentIndex": 1,
+              "Title": "json.json",
+              "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\json.json",
+              "RelativeDocumentMoniker": "json.json",
+              "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\json.json*",
+              "RelativeToolTip": "json.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-25T21:03:57.689Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAwwDMAAAAMAAAA",
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "Controllers\\NotificationController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T21:29:00.5Z",
+              "WhenOpened": "2024-05-25T21:02:32.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-25T20:06:46.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "WebAPI.Domain.csproj",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI.Domain\\WebAPI.Domain.csproj",
               "RelativeDocumentMoniker": "..\\WebAPI.Domain\\WebAPI.Domain.csproj",
@@ -123,20 +148,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
               "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAqwDUAAAAIAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwBkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T20:57:32.535Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -149,30 +174,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "AccountsController.cs",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\AccountsController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountsController.cs",
               "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\AccountsController.cs",
               "RelativeToolTip": "Controllers\\AccountsController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowDEAAAAIAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-24T20:26:40.201Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.Products [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost/HomyApp/True/SqlTable/dbo.Products.sql",
-              "ToolTip": "dbo.Products [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-23T21:19:47.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -185,7 +200,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
+              "Title": "dbo.AspNetUsers [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost/HomyApp/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "dbo.AspNetUsers [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-24T21:00:29.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T21:29:00.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI.Contracts\\Login\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "..\\WebAPI.Contracts\\Login\\LoginResponse.cs",
+              "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI.Contracts\\Login\\LoginResponse.cs",
+              "RelativeToolTip": "..\\WebAPI.Contracts\\Login\\LoginResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T21:02:24.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI.Domain\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "..\\WebAPI.Domain\\ApplicationUser.cs",
@@ -198,19 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoginResponse.cs",
-              "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI.Contracts\\Login\\LoginResponse.cs",
-              "RelativeDocumentMoniker": "..\\WebAPI.Contracts\\Login\\LoginResponse.cs",
-              "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI.Contracts\\Login\\LoginResponse.cs",
-              "RelativeToolTip": "..\\WebAPI.Contracts\\Login\\LoginResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T21:02:24.969Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "WebAPI.http",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\WebAPI.http",
               "RelativeDocumentMoniker": "WebAPI.http",
@@ -222,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "20240522093132_Login.cs",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Migrations\\20240522093132_Login.cs",
               "RelativeDocumentMoniker": "Migrations\\20240522093132_Login.cs",
@@ -234,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "RegisterResponse.cs",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI.Contracts\\Accounts\\RegisterResponse.cs",
               "RelativeDocumentMoniker": "..\\WebAPI.Contracts\\Accounts\\RegisterResponse.cs",
@@ -246,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "20240521210804_UserAccount.cs",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Migrations\\20240521210804_UserAccount.cs",
               "RelativeDocumentMoniker": "Migrations\\20240521210804_UserAccount.cs",
@@ -258,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -270,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI.Contracts\\Login\\LoginRequest.cs",
               "RelativeDocumentMoniker": "..\\WebAPI.Contracts\\Login\\LoginRequest.cs",

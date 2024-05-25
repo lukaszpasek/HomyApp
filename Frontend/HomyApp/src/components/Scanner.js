@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, TextInput, Button, TouchableOpacity, View, Animated, Pressable } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import Modal from 'react-native-modal';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { AppContext } from '../context/AppContext';
+import { useTheme } from 'react-native-paper';
 import { fetchProductCategory } from './api';
-import CategoryModal from './modals/CategoryModal';
 
 export default function ScannerScreen() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -13,6 +15,8 @@ export default function ScannerScreen() {
   const [scannedData, setScannedData] = useState(null);
   const [buttonPressAnimation] = useState(new Animated.Value(1));
   const [showScanner, setShowScanner] = useState(true); // Stan określający, czy wyświetlać skaner
+  const { colors } = useTheme();
+  const { t } = React.useContext(AppContext)
 
   useEffect(() => {
     (async () => {
@@ -48,11 +52,14 @@ export default function ScannerScreen() {
         }
       }
       else category = productCategory;
+    const userId = await AsyncStorage.getItem('userId');
     const product = {
       name: productName,
       category: category,
       price: 8.00,
-      barcode: scannedData.data 
+      barcode: scannedData.data,
+      userId: userId,
+      user: {},
     };
       const response = await fetch("http://192.168.0.37:5000/api/products", {
         method: "POST",
@@ -152,16 +159,16 @@ export default function ScannerScreen() {
           </View>
         </View>
       </Modal>
-      <Text style={styles.title}>Welcome to the HomyApp!</Text>
-      <Text style={styles.paragraph}>Scan a barcode to add new product.</Text>
+      <Text style={colors.title}>{t('welcome-HomyApp')}</Text>
+      <Text style={styles.paragraph}>{t('scan-to-add')}</Text>
       {showScanner ? renderCamera() : <ScannedList data={[scannedData]} onReturnButtonPress={handleReturnButtonPress} />}
       <TouchableOpacity
         style={[styles.button, { transform: [{ scale: buttonPressAnimation }] }]}
         onPress={handleButtonPress}
         disabled={scannedData}
       >
-        <Pressable style={styles.button} onPress={handleScanButtonPress}>
-          <Text style={styles.text}>Scan QR</Text>
+        <Pressable style={colors.button} onPress={handleScanButtonPress}>
+          <Text style={colors.button}>{t('scan-qr')}</Text>
         </Pressable>
       </TouchableOpacity>
     </View>
@@ -193,20 +200,6 @@ const styles = StyleSheet.create({
   },
   camera: {
     flex: 1,
-  },
-  button: {
-    backgroundColor: '#6200ea',
-    color: 'white',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 5,
-  },
-  text: {
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    color: 'white',
   },
   toggleButton: {
     marginTop: 20,

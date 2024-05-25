@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Data;
 using WebAPI.Domain;
@@ -7,6 +8,7 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -27,7 +29,15 @@ namespace WebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
+            var user = await _context.Users.FindAsync(product.UserId);
+
+            if (user == null)
+            {
+                return NotFound($"Użytkownik o ID {product.UserId} nie został znaleziony.");
+            }
+
             product.AddDateTime = DateTime.Now;
+            product.User = user;
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 

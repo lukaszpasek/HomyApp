@@ -1,7 +1,21 @@
 {
-    "home": "Strona główna",
+    "my-products": "Moje produkty",
+    "welcome": "Witaj,",
     "login": "Zaloguj się",
+    "logout": "Wyloguj",
+    "dark-mode": "Tryb ciemny",
+    "language-mode": "Tryb językowy",
     "register": "Zarejestruj się",
-    "profile": "Profil"
+    "loading": "Ładowanie...",
+    "profile": "Profil",
+    "polish": "Polski",
+    "english": "Angielski",
+    "scan-qr": "Skanuj QR",
+    "welcome-HomyApp": "Witaj w aplikacji HomyApp!",
+    "scan-to-add": "Skanuj kod kreskowy, aby dodać nowy produkt",
+    "go-to-register": "Zarejestruj nowego użytkownika"
+
+
+
   }
   

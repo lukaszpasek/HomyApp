@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TextInput, Button, Text, useTheme } from 'react-native-paper';
+import { AppContext } from '../context/AppContext';
 import { registerUser } from '../components/api';
 
 const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const theme = useTheme();
-
+  const { colors } = useTheme();
+  const { t } = React.useContext(AppContext)
   const handleRegister = async () => {
     try {
       await registerUser(email, password);
@@ -20,7 +22,7 @@ const RegisterScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Register</Text>
+      <Text style={colors.title}>{t('register')}</Text>
       <TextInput
         label="Email"
         value={email}
@@ -36,8 +38,8 @@ const RegisterScreen = ({ navigation }) => {
         style={styles.input}
         secureTextEntry
       />
-      <Button mode="contained" onPress={handleRegister} style={styles.button}>
-        Register
+      <Button mode="contained" onPress={handleRegister} style={colors.button} theme={theme}>
+      {t('register')}
       </Button>
     </View>
   );
@@ -48,12 +50,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 16,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 24,
-    textAlign: 'center',
   },
   input: {
     marginBottom: 16,
