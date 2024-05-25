@@ -27,24 +27,39 @@ namespace WebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
+            product.AddDateTime = DateTime.Now;
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
+            return Ok(product);
         }
 
-        // GET: api/Products/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        [HttpGet("{barcode}")]
+        public async Task<ActionResult<Product>> GetProduct(string barcode)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _context.Products.FirstOrDefaultAsync(c => c.Barcode == barcode);
 
             if (product == null)
             {
                 return NotFound();
             }
 
-            return product;
+            return Ok(product);
+        }
+        [HttpGet("User/{userId}")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetProductsByUserId(int userId)
+        {
+            var products = await _context.Products
+                .Where(p => p.UserId == userId)
+                .Include(p => p.User)
+                .ToListAsync();
+
+            if (products == null || !products.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(products);
         }
     }
 }

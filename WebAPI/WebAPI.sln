@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI.csproj", "{1854BA94-5DCA-44EA-9149-E976AAD63828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI.csproj", "{1854BA94-5DCA-44EA-9149-E976AAD63828}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Domain", "..\WebAPI.Domain\WebAPI.Domain.csproj", "{278B4694-292D-4638-99E5-A53A4CAF63E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI.Domain", "..\WebAPI.Domain\WebAPI.Domain.csproj", "{278B4694-292D-4638-99E5-A53A4CAF63E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Contracts", "..\WebAPI.Contracts\WebAPI.Contracts.csproj", "{1B39E2F0-293D-4C31-A61B-F2D5033C1337}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{278B4694-292D-4638-99E5-A53A4CAF63E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{278B4694-292D-4638-99E5-A53A4CAF63E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{278B4694-292D-4638-99E5-A53A4CAF63E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B39E2F0-293D-4C31-A61B-F2D5033C1337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B39E2F0-293D-4C31-A61B-F2D5033C1337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B39E2F0-293D-4C31-A61B-F2D5033C1337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B39E2F0-293D-4C31-A61B-F2D5033C1337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

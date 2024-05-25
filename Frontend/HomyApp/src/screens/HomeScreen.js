@@ -3,6 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
+  Alert,
+  TouchableOpacity,
   ImageBackground,
   useWindowDimensions,
 } from "react-native";
@@ -24,22 +26,35 @@ import Animated, {
   useAnimatedProps,
 } from "react-native-reanimated";
 import ScannerScreen from "../components/Scanner";
-import SwipeUpToOpen from "../components/SwipeUpToOpen";
 import home2 from "../../assets/images/home2.jpg";
-import NotificationsList from "../components/NotificationsList";
+import ProductsList from "../components/ProductsList";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function App() {
+export default function App({ navigation }) {
   const [date, setDate] = useState(dayjs());
-  const [showScanner, setShowScanner] = useState(false);
+  const [showScanner, setShowScanner] = useState(true);
   const { height } = useWindowDimensions();
+  const [loggedIn, setLoggedIn] = useState(false);
   const y = useSharedValue(height);
 
   const footerVisibility = useSharedValue(1);
   const footerHeight = useDerivedValue(() =>
     interpolate(footerVisibility.value, [0, 1], [0, 85])
   );
-  const toggleScanner = () => {
+  const toggleScanner = async () => {
+    const token = await AsyncStorage.getItem('userToken');
+    if(token)
+    {
     setShowScanner(!showScanner);
+    }
+    else 
+    {
+      Alert.alert(
+        'Brak dostępu',
+        'Musisz się najpierw zalogować.',
+        [{ text: 'OK' }]
+    );
+    }
   };
   useEffect(() => {
     const interval = setInterval(() => {
@@ -64,27 +79,6 @@ export default function App() {
       },
     ],
   }));
-
-  const unlockGestureHandler = useAnimatedGestureHandler({
-    onActive: (event) => {
-      y.value = event.absoluteY;
-    },
-    onEnd: (event) => {
-      if (event.velocityY < -500) {
-        // unlock
-        y.value = withTiming(0, { easing: Easing.linear });
-      } else if (event.velocityY > 500) {
-        // reset
-        y.value = withTiming(height, { easing: Easing.linear });
-      } else if (y.value < height / 2 || event.velocityY < -500) {
-        // unlock
-        y.value = withTiming(0, { easing: Easing.linear });
-      } else {
-        // reset
-        y.value = withTiming(height, { easing: Easing.linear });
-      }
-    },
-  });
 
   const homeScreenBlur = useAnimatedProps(() => ({
     intensity: interpolate(y.value, [0, height], [0, 100]),
@@ -129,7 +123,7 @@ export default function App() {
           <View style={styles.container}>
             {showScanner ? (<ScannerScreen />) : 
             (
-              <NotificationsList
+              <ProductsList
                 footerVisibility={footerVisibility}
                 footerHeight={footerHeight}
                 ListHeaderComponent={Header}
@@ -148,9 +142,7 @@ export default function App() {
                 onPress={toggleScanner}
               />
             </View>
-
-            <SwipeUpToOpen />
-
+            
             <View style={styles.icon}>
               <AntDesign name="upcircle" size={24} color="black" />
             </View>
@@ -174,15 +166,15 @@ const styles = StyleSheet.create({
     height: 250,
   },
   ListHeader: {
-    color: "red",
+    color: "#6200ea",
     fontSize: 32,
     fontWeight: "bold",
-    marginTop: 20,
   },
   footer: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: "auto",
+    color: "red",
     marginBottom: 10,
     paddingVertical: 10,
     paddingHorizontal: 30,
@@ -195,6 +187,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
+  },
+  navigationButtons: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: 10,
+    marginBottom: 10,
   },
   panGestureContainerUnlock: {
     position: "absolute",

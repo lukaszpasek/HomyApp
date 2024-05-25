@@ -14,7 +14,7 @@ const SwipeUpToOpen = () => {
         translateY: withRepeat(
           withSequence(
             withTiming(-15, { duration: 300 }),
-            withDelay(1500, withTiming(0, { duration: 3000 })),
+            withDelay(1500, withTiming(0, { duration: 2000 })),
             withTiming(-15)
           ),
           -1
@@ -34,7 +34,7 @@ const SwipeUpToOpen = () => {
     <Animated.Text
       style={[
         {
-          color: "white",
+          color: "#6200ea",
           fontWeight: "600",
           alignSelf: "flex-end",
           letterSpacing: 0.5,
@@ -42,7 +42,7 @@ const SwipeUpToOpen = () => {
         animatedStyles,
       ]}
     >
-      Swipe up to open
+      Swipe up
     </Animated.Text>
   );
 };

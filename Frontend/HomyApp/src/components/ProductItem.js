@@ -10,12 +10,16 @@ import { BlurView } from "expo-blur";
 
 export const NOTIFICATION_HEIGHT = 80;
 
-const NotificationItem = ({ data, index, listVisibility, scrollY, footerHeight }) => {
+export default ProductItem = ({ data, index, listVisibility, scrollY, footerHeight }) => {
   const { height } = useWindowDimensions();
   const containerHeight = useDerivedValue(() => height - 250 - footerHeight.value);
 
   const startPosition = NOTIFICATION_HEIGHT * index;
-
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    return date.toLocaleDateString(undefined, options);
+  }
   const animatedStyle = useAnimatedStyle(() => {
     const pos1 = startPosition - containerHeight.value;
     const pos2 = startPosition + NOTIFICATION_HEIGHT - containerHeight.value;
@@ -67,6 +71,7 @@ const NotificationItem = ({ data, index, listVisibility, scrollY, footerHeight }
         <Image source={{ uri: data.icon }} style={styles.icon} />
         <View style={{ flex: 1 }}>
           <Text style={styles.title}>{data.name}</Text>
+          <Text style={styles.subtitle}>DateTime: {formatDate(data.addDateTime)}</Text>
           <Text style={styles.subtitle}>Price: {data.price}[PLN]</Text>
         </View>
       </BlurView>
@@ -102,4 +107,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default NotificationItem;
+

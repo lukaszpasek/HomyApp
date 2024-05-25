@@ -1,14 +1,16 @@
 import { FlatList, useWindowDimensions } from "react-native";
 import React, { useState, useEffect } from 'react';
-import NotificationItem from "./NotificationItem";
+import ProductItem from "./ProductItem";
 import Animated, {
   useAnimatedScrollHandler,
   withTiming,
   withSpring,
   useSharedValue,
 } from "react-native-reanimated";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { fetchUserProducts } from '../components/api';
 
-const NotificationsList = ({
+export default ProductsList = ({
   footerVisibility,
   footerHeight,
   ...flatListProps
@@ -20,13 +22,9 @@ const NotificationsList = ({
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await fetch('http://192.168.0.37:5000/api/products');
-        const data = await response.json();
-        setProductsList(data);
-      } catch (error) {
-        console.error('Error when loading data:', error);
-      }
+      const token = await AsyncStorage.getItem('userToken');
+      const data = await fetchUserProducts(token);
+      setProductsList(data);
     };
 
     fetchData();
@@ -61,7 +59,7 @@ const NotificationsList = ({
     <Animated.FlatList
       data={productsList}
       renderItem={({ item, index }) => (
-        <NotificationItem
+        <ProductItem
           data={item}
           index={index}
           listVisibility={listVisibility}
@@ -76,4 +74,4 @@ const NotificationsList = ({
   );
 };
 
-export default NotificationsList;
+
