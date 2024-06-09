@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useMemo } from 'react';
 import {
   StyleSheet,
   Text,
@@ -6,7 +6,9 @@ import {
   Alert,
   ImageBackground,
   useWindowDimensions,
-} from "react-native";
+  TextInput,
+  Button,
+} from 'react-native';
 import wallpaper from "../../assets/images/wallpaper.webp";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import AntDesign from '@expo/vector-icons/AntDesign';
@@ -29,9 +31,12 @@ import ScannerScreen from "../components/Scanner";
 import home2 from "../../assets/images/home2.jpg";
 import ProductsList from "../components/ProductsList";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getGeminiResponse } from '../services/openaiService'; // Import the service
 
-export default function App({ navigation }) {
+const App = ({ navigation }) => {
   const [showScanner, setShowScanner] = useState(true);
+  const [chatInput, setChatInput] = useState('');
+  const [chatResponse, setChatResponse] = useState('');
   const { height } = useWindowDimensions();
   const { colors } = useTheme();
   const { t } = React.useContext(AppContext)
@@ -41,19 +46,17 @@ export default function App({ navigation }) {
   const footerHeight = useDerivedValue(() =>
     interpolate(footerVisibility.value, [0, 1], [0, 85])
   );
+
   const toggleScanner = async () => {
     const token = await AsyncStorage.getItem('userToken');
-    if(token)
-    {
-    setShowScanner(!showScanner);
-    }
-    else 
-    {
+    if (token) {
+      setShowScanner(!showScanner);
+    } else {
       Alert.alert(
         'Brak dostępu',
         'Musisz się najpierw zalogować.',
         [{ text: 'OK' }]
-    );
+      );
     }
   };
 
@@ -81,14 +84,21 @@ export default function App({ navigation }) {
     intensity: interpolate(y.value, [0, height], [100, 0]),
   }));
 
-  const Header = useMemo(
-    () => (
-      <Animated.View entering={SlideInUp} style={styles.header}>
-        <Ionicons size={20} color="white" />
-        <Text style={colors.title}>{t('my-products')}</Text>
-      </Animated.View>
-    ),
-  );
+  const Header = useMemo(() => (
+    <Animated.View entering={SlideInUp} style={styles.header}>
+      <Ionicons size={20} color="white" />
+      <Text style={colors.title}>{t('my-products')}</Text>
+    </Animated.View>
+  ), [colors.title, t]);
+
+  const handleChatSubmit = async () => {
+    try {
+      const response = await getGeminiResponse(chatInput);
+      setChatResponse(response);
+    } catch (error) {
+      Alert.alert('Error', 'There was an error getting the response from ChatGPT');
+    }
+  };
 
   return (
     <>
@@ -113,14 +123,26 @@ export default function App({ navigation }) {
             }}
           />
           <View style={styles.container}>
-            {showScanner ? (<ScannerScreen />) : 
-            (
-              <ProductsList
-                footerVisibility={footerVisibility}
-                footerHeight={footerHeight}
-                ListHeaderComponent={Header}
-              />
-            )}
+            {showScanner ? (<ScannerScreen />) :
+              (
+                <ProductsList
+                  footerVisibility={footerVisibility}
+                  footerHeight={footerHeight}
+                  ListHeaderComponent={Header}
+                />
+              )}
+          </View>
+          <View style={styles.chatContainer}>
+            <TextInput
+              style={styles.chatInput}
+              placeholder="Ask ChatGPT"
+              value={chatInput}
+              onChangeText={setChatInput}
+            />
+            <Button title="Send" onPress={handleChatSubmit} />
+            {chatResponse ? (
+              <Text style={styles.chatResponse}>{chatResponse}</Text>
+            ) : null}
           </View>
           <Animated.View
             entering={SlideInDown}
@@ -134,7 +156,7 @@ export default function App({ navigation }) {
                 onPress={toggleScanner}
               />
             </View>
-            
+
             <View style={styles.icon}>
               <AntDesign name="upcircle" size={24} color="black" />
             </View>
@@ -193,4 +215,22 @@ const styles = StyleSheet.create({
       },
     ],
   },
+  chatContainer: {
+    padding: 20,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    borderRadius: 10,
+    margin: 10,
+  },
+  chatInput: {
+    backgroundColor: 'white',
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  chatResponse: {
+    color: 'white',
+    marginTop: 10,
+  },
 });
+
+export default App;

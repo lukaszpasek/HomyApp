@@ -5,7 +5,7 @@ import Modal from 'react-native-modal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AppContext } from '../context/AppContext';
 import { useTheme } from 'react-native-paper';
-import { fetchProductCategory } from './api';
+import { fetchProductCategory,addProduct } from './api';
 
 export default function ScannerScreen() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -61,20 +61,9 @@ export default function ScannerScreen() {
       userId: userId,
       user: {},
     };
-      const response = await fetch("http://192.168.0.37:5000/api/products", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(product),
-      });
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Error ${response.status}: ${errorText}`);
-      }
 
-      const responseData = await response.json();
+      const responseData = await addProduct(product);
     } catch (error) {
       console.error("Request failed", error);
     } finally {

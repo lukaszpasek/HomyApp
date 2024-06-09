@@ -87,12 +87,11 @@
               "Title": "json.json",
               "DocumentMoniker": "C:\\Studia\\AM\\HomyApp\\WebAPI\\json.json",
               "RelativeDocumentMoniker": "json.json",
-              "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\json.json*",
-              "RelativeToolTip": "json.json*",
+              "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\json.json",
+              "RelativeToolTip": "json.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-25T21:03:57.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T21:03:57.689Z"
             },
             {
               "$type": "Document",
@@ -102,7 +101,7 @@
               "RelativeDocumentMoniker": "Controllers\\NotificationController.cs",
               "ToolTip": "C:\\Studia\\AM\\HomyApp\\WebAPI\\Controllers\\NotificationController.cs",
               "RelativeToolTip": "Controllers\\NotificationController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAA/AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T21:02:32.026Z",
               "EditorCaption": ""
@@ -117,8 +116,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-25T20:06:46.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T20:06:46.163Z"
             },
             {
               "$type": "Document",
@@ -130,8 +128,7 @@
               "RelativeToolTip": "..\\WebAPI.Domain\\WebAPI.Domain.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-23T21:02:09.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T21:02:09.077Z"
             },
             {
               "$type": "Document",
@@ -143,8 +140,7 @@
               "RelativeToolTip": "..\\WebAPI.Domain\\Product.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T20:45:35.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T20:45:35.175Z"
             },
             {
               "$type": "Document",
@@ -156,8 +152,7 @@
               "RelativeToolTip": "Controllers\\LoginController.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAgwBkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T20:57:32.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-21T20:57:32.535Z"
             },
             {
               "$type": "Document",
@@ -169,8 +164,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T21:33:44.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T21:33:44.149Z"
             },
             {
               "$type": "Document",
@@ -182,8 +176,7 @@
               "RelativeToolTip": "Controllers\\AccountsController.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAACwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T20:26:40.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T20:26:40.201Z"
             },
             {
               "$type": "Document",
@@ -195,8 +188,7 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T21:03:04.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T21:03:04.549Z"
             },
             {
               "$type": "Document",
@@ -205,8 +197,7 @@
               "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost/HomyApp/True/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "dbo.AspNetUsers [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-24T21:00:29.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T21:00:29.543Z"
             },
             {
               "$type": "Document",
@@ -218,8 +209,7 @@
               "RelativeToolTip": "Controllers\\ProductsController.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAAAAoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T21:29:00.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T21:29:00.5Z"
             },
             {
               "$type": "Document",
@@ -231,8 +221,7 @@
               "RelativeToolTip": "..\\WebAPI.Contracts\\Login\\LoginResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T21:02:24.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-21T21:02:24.969Z"
             },
             {
               "$type": "Document",
@@ -244,8 +233,7 @@
               "RelativeToolTip": "..\\WebAPI.Domain\\ApplicationUser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T21:11:59.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T21:11:59.848Z"
             },
             {
               "$type": "Document",
